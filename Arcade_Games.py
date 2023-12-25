@@ -29,7 +29,6 @@ run = True
 
 
 def init_window():
-    global WIN
     WIN = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Arcade")
 
@@ -1123,7 +1122,7 @@ def SpaceInvaders():
             self.start_game()
 
         def start_game(self):
-            global alpha
+            alpha = 1.0 * self.elapsed_time
             self.background = pygame.image.load(
                 "./images/background.png"
             ).convert_alpha()
